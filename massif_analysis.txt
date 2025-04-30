@@ -1,0 +1,1015 @@
+--------------------------------------------------------------------------------
+Command:            ./build/bench_coro_vs_future
+Massif arguments:   --stacks=yes
+ms_print arguments: massif.out.397156
+--------------------------------------------------------------------------------
+
+
+    MB
+3.144^                                                                       #
+     |                                                                     @@#
+     |                                                                   @@@@#
+     |                                                                 @@@@@@#
+     |                                                              @@@@@@@@@#
+     |                                                            @@@@@@@@@@@#
+     |                                                           @@@@@@@@@@@@#
+     |                                                        @@@@@@@@@@@@@@@#
+     |                                                      @@@ @@@@@@@@@@@@@#
+     |                                                    @@@@@ @@@@@@@@@@@@@#
+     |                                                 @@@@@@@@ @@@@@@@@@@@@@#
+     |                                              @@@@@ @@@@@ @@@@@@@@@@@@@#
+     |                                             @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                                          @@@@@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                                        @@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                                     @@@@@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                                    @@@ @@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                                 @@@@@@ @@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                              @@@@ @@@@ @@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+     |                             @@ @@ @@@@ @@@@ @@ @@@ @@@@@ @@@@@@@@@@@@@#
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   308.8
+
+Number of snapshots: 81
+ Detailed snapshots: [1, 5, 9, 12, 16, 21, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,991,208           97,760           94,381           339        3,040
+96.54% (94,381B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->75.42% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->75.42% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->75.42% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->75.42% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->75.42% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->16.76% (16,384B) 0x49D0CA3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->16.76% (16,384B) 0x49D4CE5: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+|   ->08.38% (8,192B) 0x48793A0: ??? (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   | ->08.38% (8,192B) 0x487CA2D: benchmark::CPUInfo::CPUInfo() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |   ->08.38% (8,192B) 0x487CC44: benchmark::CPUInfo::Get() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |     ->08.38% (8,192B) 0x487CD48: benchmark::BenchmarkReporter::Context::Context() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |       ->08.38% (8,192B) 0x48A164E: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |         ->08.38% (8,192B) 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   |           
+|   ->08.38% (8,192B) 0x48797FD: ??? (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   | ->08.38% (8,192B) 0x487CA2D: benchmark::CPUInfo::CPUInfo() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |   ->08.38% (8,192B) 0x487CC44: benchmark::CPUInfo::Get() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |     ->08.38% (8,192B) 0x487CD48: benchmark::BenchmarkReporter::Context::Context() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |       ->08.38% (8,192B) 0x48A164E: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+|   |         ->08.38% (8,192B) 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   |           
+|   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->03.30% (3,229B) in 25 places, all below massif's threshold (1.00%)
+| 
+->01.06% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.06% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.06% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.06% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.06% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.06% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.06% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2      8,312,607           81,288           78,013           451        2,824
+  3     12,249,798           81,272           77,957           435        2,880
+  4     17,141,122           81,312           77,953           415        2,944
+  5     22,981,506           81,312           77,953           415        2,944
+95.87% (77,953B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.67% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->90.67% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->90.67% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->90.67% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->90.67% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->03.92% (3,185B) in 38 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.28% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.28% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.28% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.28% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.28% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.28% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  6     27,453,410           81,232           77,953           415        2,864
+  7     33,531,658           81,232           77,953           415        2,864
+  8     39,609,906           81,232           77,953           415        2,864
+  9     43,661,726           81,168           77,953           415        2,800
+96.04% (77,953B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.83% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->90.83% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->90.83% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->90.83% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->90.83% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->03.92% (3,185B) in 38 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.28% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.28% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.28% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.28% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.28% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.28% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10     47,713,434           81,264           77,957           435        2,872
+ 11     52,440,420           81,264           77,957           435        2,872
+ 12     57,167,406           81,264           77,957           435        2,872
+95.93% (77,957B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.73% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->90.73% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->90.73% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->90.73% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->90.73% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->03.92% (3,189B) in 38 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.28% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.28% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.28% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.28% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.28% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.28% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 13     61,894,392           81,264           77,957           435        2,872
+ 14     66,621,378           81,264           77,957           435        2,872
+ 15     73,374,212           81,368           78,013           451        2,904
+ 16     78,379,405           81,376           78,009           431        2,936
+95.86% (78,009B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.60% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->90.60% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->90.60% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->90.60% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->90.60% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->03.98% (3,241B) in 38 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.28% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.28% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.28% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.28% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.28% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.28% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     82,033,993           80,976           77,785           399        2,792
+ 18     86,602,279           81,336           78,013           451        2,872
+ 19     93,911,485           80,976           77,785           399        2,792
+ 20     98,479,771           81,336           78,013           451        2,872
+ 21    105,788,977           80,976           77,785           399        2,792
+96.06% (77,785B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->91.05% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->91.05% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->91.05% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->91.05% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->91.05% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->03.73% (3,017B) in 38 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  ->01.28% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+    ->01.28% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+      ->01.28% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+        ->01.28% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+          ->01.28% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+            ->01.28% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22    110,357,263           81,336           78,013           451        2,872
+ 23    117,666,469           80,976           77,785           399        2,792
+ 24    123,081,643           99,248           87,177           519       11,552
+87.84% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->74.29% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->74.29% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->74.29% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->74.29% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->74.29% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->04.25% (4,217B) in 50 places, all below massif's threshold (1.00%)
+| 
+->04.13% (4,096B) 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()
+| ->04.13% (4,096B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   ->04.13% (4,096B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+|     ->04.13% (4,096B) 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()
+|       ->04.13% (4,096B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+|         ->04.13% (4,096B) 0x4B4B608: start_thread (pthread_create.c:477)
+|           ->04.13% (4,096B) 0x4C85352: clone (clone.S:95)
+|             
+->03.10% (3,072B) 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+| ->03.10% (3,072B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   ->03.10% (3,072B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+|     ->03.10% (3,072B) 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+|       ->03.10% (3,072B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+|         ->03.10% (3,072B) 0x4B4B608: start_thread (pthread_create.c:477)
+|           ->03.10% (3,072B) 0x4C85352: clone (clone.S:95)
+|             
+->01.05% (1,040B) 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+| ->01.05% (1,040B) 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+|   ->01.05% (1,040B) 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+|     ->01.05% (1,040B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|       ->01.05% (1,040B) 0x4011CA0: call_init (dl-init.c:30)
+|         ->01.05% (1,040B) 0x4011CA0: _dl_init (dl-init.c:119)
+|           ->01.05% (1,040B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|             
+->01.03% (1,024B) 0x4BE7D03: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.03% (1,024B) 0x4BF7ECF: _IO_doallocbuf (genops.c:347)
+    ->01.03% (1,024B) 0x4BF6F2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    | ->01.03% (1,024B) 0x4BF56B4: _IO_new_file_xsputn (fileops.c:1244)
+    |   ->01.03% (1,024B) 0x4BF56B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+    |     ->01.03% (1,024B) 0x4BE93C0: fwrite (iofwrite.c:39)
+    |       ->01.03% (1,024B) 0x49F9A34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+    |         ->01.03% (1,024B) 0x4883F42: benchmark::ConsoleReporter::PrintHeader(benchmark::BenchmarkReporter::Run const&) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+    |           ->01.03% (1,024B) 0x48826E0: benchmark::ConsoleReporter::ReportRuns(std::vector<benchmark::BenchmarkReporter::Run, std::allocator<benchmark::BenchmarkReporter::Run> > const&) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+    |             ->01.03% (1,024B) 0x48A1BB9: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+    |               ->01.03% (1,024B) 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+    |                 
+    ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 25    125,966,178          145,184           87,177           519       57,488
+60.05% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->50.78% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->50.78% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->50.78% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->50.78% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->50.78% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->04.33% (6,281B) in 52 places, all below massif's threshold (1.00%)
+| 
+->02.82% (4,096B) 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()
+| ->02.82% (4,096B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   ->02.82% (4,096B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+|     ->02.82% (4,096B) 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()
+|       ->02.82% (4,096B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+|         ->02.82% (4,096B) 0x4B4B608: start_thread (pthread_create.c:477)
+|           ->02.82% (4,096B) 0x4C85352: clone (clone.S:95)
+|             
+->02.12% (3,072B) 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+  ->02.12% (3,072B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+    ->02.12% (3,072B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+      ->02.12% (3,072B) 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+        ->02.12% (3,072B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+          ->02.12% (3,072B) 0x4B4B608: start_thread (pthread_create.c:477)
+            ->02.12% (3,072B) 0x4C85352: clone (clone.S:95)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 26    132,400,491          247,616           87,177           519      159,920
+35.21% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->29.78% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->29.78% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->29.78% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->29.78% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->29.78% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->02.54% (6,281B) in 52 places, all below massif's threshold (1.00%)
+| 
+->01.65% (4,096B) 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()
+| ->01.65% (4,096B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+|   ->01.65% (4,096B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+|     ->01.65% (4,096B) 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()
+|       ->01.65% (4,096B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+|         ->01.65% (4,096B) 0x4B4B608: start_thread (pthread_create.c:477)
+|           ->01.65% (4,096B) 0x4C85352: clone (clone.S:95)
+|             
+->01.24% (3,072B) 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+  ->01.24% (3,072B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+    ->01.24% (3,072B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+      ->01.24% (3,072B) 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()
+        ->01.24% (3,072B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+          ->01.24% (3,072B) 0x4B4B608: start_thread (pthread_create.c:477)
+            ->01.24% (3,072B) 0x4C85352: clone (clone.S:95)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 27    139,263,779          356,912           87,177           519      269,216
+24.43% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->20.66% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->20.66% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->20.66% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->20.66% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->20.66% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->02.62% (9,353B) in 53 places, all below massif's threshold (1.00%)
+| 
+->01.15% (4,096B) 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()
+  ->01.15% (4,096B) 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+    ->01.15% (4,096B) 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+      ->01.15% (4,096B) 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()
+        ->01.15% (4,096B) 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+          ->01.15% (4,096B) 0x4B4B608: start_thread (pthread_create.c:477)
+            ->01.15% (4,096B) 0x4C85352: clone (clone.S:95)
+              
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28    145,496,989          456,176           87,177           519      368,480
+19.11% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->16.16% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->16.16% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->16.16% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->16.16% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->16.16% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->02.95% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 29    152,492,907          567,584           87,177           519      479,888
+15.36% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->12.99% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->12.99% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->12.99% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->12.99% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->12.99% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->02.37% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 30    157,632,145          649,424           87,177           519      561,728
+13.42% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->11.35% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->11.35% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->11.35% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->11.35% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->11.35% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->02.07% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31    164,961,786          766,112           87,177           519      678,416
+11.38% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->09.62% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->09.62% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->09.62% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->09.62% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->09.62% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.76% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32    169,073,216          831,584           87,177           519      743,888
+10.48% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->08.87% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->08.87% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->08.87% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->08.87% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->08.87% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.62% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33    175,339,765          931,376           87,177           519      843,680
+09.36% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->07.92% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->07.92% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->07.92% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->07.92% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->07.92% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.44% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 34    180,280,081        1,010,048           87,177           519      922,352
+08.63% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->07.30% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->07.30% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->07.30% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->07.30% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->07.30% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.33% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 35    185,684,376        1,096,112           87,177           519    1,008,416
+07.95% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->06.73% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->06.73% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->06.73% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->06.73% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->06.73% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.23% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36    190,757,358        1,176,896           87,177           519    1,089,200
+07.41% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->06.26% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->06.26% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->06.26% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->06.26% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->06.26% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.14% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37    196,990,778        1,276,160           87,177           519    1,188,464
+06.83% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->05.78% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->05.78% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->05.78% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->05.78% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->05.78% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.05% (13,449B) in 54 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 38    204,649,816        1,398,128           87,177           519    1,310,432
+06.24% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->05.27% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->05.27% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->05.27% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->05.27% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->05.27% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.96% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 39    211,115,363        1,501,088           87,177           519    1,413,392
+05.81% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->04.91% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->04.91% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->04.91% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->04.91% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->04.91% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.90% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 40    219,072,918        1,627,808           87,177           519    1,540,112
+05.36% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->04.53% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->04.53% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->04.53% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->04.53% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->04.53% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.83% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 41    223,283,782        1,694,864           87,177           519    1,607,168
+05.14% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->04.35% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->04.35% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->04.35% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->04.35% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->04.35% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.79% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42    227,693,633        1,765,088           87,177           519    1,677,392
+04.94% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->04.18% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->04.18% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->04.18% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->04.18% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->04.18% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.76% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43    234,623,161        1,875,440           87,177           519    1,787,744
+04.65% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.93% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.93% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.93% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.93% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.93% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.72% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 44    239,463,967        1,952,528           87,177           519    1,864,832
+04.46% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.78% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.78% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.78% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.78% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.78% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.69% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 45    244,503,735        2,032,784           87,177           519    1,945,088
+04.29% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.63% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.63% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.63% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.63% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.63% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.66% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46    249,742,436        2,116,208           87,177           519    2,028,512
+04.12% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.48% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.48% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.48% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.48% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.48% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.64% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 47    255,213,224        2,203,328           87,177           519    2,115,632
+03.96% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.35% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.35% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.35% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.35% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.35% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.61% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48    260,916,083        2,294,144           87,177           519    2,206,448
+03.80% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.21% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.21% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.21% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.21% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.21% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.59% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 49    268,376,045        2,412,944           87,177           519    2,325,248
+03.61% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.06% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.06% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.06% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.06% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.06% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.56% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50    269,901,162        2,437,232           87,177           519    2,349,536
+03.58% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->03.03% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->03.03% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->03.03% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->03.03% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->03.03% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.55% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51    271,459,473        2,462,048           87,177           519    2,374,352
+03.54% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.99% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.99% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.99% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.99% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.99% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.55% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 52    273,017,853        2,486,864           87,177           519    2,399,168
+03.51% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.96% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.96% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.96% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.96% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.96% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.54% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53    274,609,360        2,512,208           87,177           519    2,424,512
+03.47% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.93% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.93% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.93% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.93% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.93% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.54% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 54    276,200,896        2,537,552           87,177           519    2,449,856
+03.44% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.91% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.91% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.91% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.91% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.91% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.53% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 55    277,825,550        2,563,424           87,177           519    2,475,728
+03.40% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.88% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.88% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.88% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.88% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.88% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.52% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 56    279,450,139        2,589,296           87,177           519    2,501,600
+03.37% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.85% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.85% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.85% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.85% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.85% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.52% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57    281,107,951        2,615,696           87,177           519    2,528,000
+03.33% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.82% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.82% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.82% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.82% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.82% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.51% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58    282,765,763        2,642,096           87,177           519    2,554,400
+03.30% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.79% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.79% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.79% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.79% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.79% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.51% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 59    284,456,769        2,669,024           87,177           519    2,581,328
+03.27% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.76% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.76% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.76% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.76% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.76% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.50% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 60    286,147,739        2,695,952           87,177           519    2,608,256
+03.23% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.73% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.73% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.73% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.73% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.73% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.50% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61    287,871,903        2,723,408           87,177           519    2,635,712
+03.20% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.71% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.71% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.71% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.71% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.71% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.49% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 62    289,596,067        2,750,864           87,177           519    2,663,168
+03.17% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.68% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.68% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.68% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.68% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.68% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.49% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 63    291,353,329        2,778,848           87,177           519    2,691,152
+03.14% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.65% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.65% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.65% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.65% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.65% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.48% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 64    293,110,651        2,806,832           87,177           519    2,719,136
+03.11% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.63% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.63% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.63% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.63% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.63% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.48% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 65    294,901,091        2,835,344           87,177           519    2,747,648
+03.07% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.60% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.60% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.60% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.60% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.60% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.47% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 66    296,691,569        2,863,856           87,177           519    2,776,160
+03.04% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.57% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.57% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.57% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.57% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.57% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.47% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67    298,515,203        2,892,896           87,177           519    2,805,200
+03.01% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.55% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.55% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.55% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.55% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.55% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.46% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 68    300,338,810        2,921,936           87,177           519    2,834,240
+02.98% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.52% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.52% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.52% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.52% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.52% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.46% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 69    302,195,564        2,951,504           87,177           519    2,863,808
+02.95% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.50% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.50% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.50% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.50% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.50% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.46% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 70    304,052,318        2,981,072           87,177           519    2,893,376
+02.92% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.47% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.47% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.47% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.47% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.47% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.45% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 71    305,942,190        3,011,168           87,177           519    2,923,472
+02.90% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.45% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.45% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.45% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.45% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.45% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.45% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 72    307,898,425        3,042,320           87,177           519    2,954,624
+02.87% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.42% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.42% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.42% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.42% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.42% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.44% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 73    309,821,531        3,072,944           87,177           519    2,985,248
+02.84% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.40% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.40% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.40% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.40% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.40% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.44% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 74    311,777,764        3,104,096           87,177           519    3,016,400
+02.81% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.38% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.38% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.38% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.38% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.38% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.43% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 75    313,733,999        3,135,248           87,177           519    3,047,552
+02.78% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.35% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.35% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.35% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.35% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.35% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.43% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 76    315,723,390        3,166,928           87,177           519    3,079,232
+02.75% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.33% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.33% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.33% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.33% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.33% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.42% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77    317,712,781        3,198,608           87,177           519    3,110,912
+02.73% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.31% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.31% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.31% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.31% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.31% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.42% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 78    319,735,290        3,230,816           87,177           519    3,143,120
+02.70% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.28% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.28% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.28% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.28% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.28% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.42% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 79    321,790,995        3,263,552           87,177           519    3,175,856
+02.67% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.26% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.26% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.26% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.26% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.26% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.41% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 80    323,846,691        3,296,288           87,177           519    3,208,592
+02.64% (87,177B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->02.24% (73,728B) 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+| ->02.24% (73,728B) 0x4011B99: call_init.part.0 (dl-init.c:72)
+|   ->02.24% (73,728B) 0x4011CA0: call_init (dl-init.c:30)
+|     ->02.24% (73,728B) 0x4011CA0: _dl_init (dl-init.c:119)
+|       ->02.24% (73,728B) 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.41% (13,449B) in 1+ places, all below ms_print's threshold (01.00%)
+

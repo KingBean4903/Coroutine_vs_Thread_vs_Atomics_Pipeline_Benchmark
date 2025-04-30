@@ -1,0 +1,1217 @@
+desc: --stacks=yes
+cmd: ./build/bench_coro_vs_future
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2991208
+mem_heap_B=94381
+mem_heap_extra_B=339
+mem_stacks_B=3040
+heap_tree=detailed
+n4: 94381 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 16384 0x49D0CA3: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n3: 16384 0x49D4CE5: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+   n1: 8192 0x48793A0: ??? (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+    n1: 8192 0x487CA2D: benchmark::CPUInfo::CPUInfo() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+     n1: 8192 0x487CC44: benchmark::CPUInfo::Get() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+      n1: 8192 0x487CD48: benchmark::BenchmarkReporter::Context::Context() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+       n1: 8192 0x48A164E: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+        n0: 8192 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 8192 0x48797FD: ??? (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+    n1: 8192 0x487CA2D: benchmark::CPUInfo::CPUInfo() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+     n1: 8192 0x487CC44: benchmark::CPUInfo::Get() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+      n1: 8192 0x487CD48: benchmark::BenchmarkReporter::Context::Context() (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+       n1: 8192 0x48A164E: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+        n0: 8192 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 3229 in 25 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=2
+#-----------
+time=8312607
+mem_heap_B=78013
+mem_heap_extra_B=451
+mem_stacks_B=2824
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=12249798
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2880
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=17141122
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2944
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=22981506
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2944
+heap_tree=detailed
+n3: 77953 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3185 in 38 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=6
+#-----------
+time=27453410
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=33531658
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=39609906
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2864
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=43661726
+mem_heap_B=77953
+mem_heap_extra_B=415
+mem_stacks_B=2800
+heap_tree=detailed
+n3: 77953 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3185 in 38 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=10
+#-----------
+time=47713434
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=52440420
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=57167406
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2872
+heap_tree=detailed
+n3: 77957 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3189 in 38 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=13
+#-----------
+time=61894392
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=66621378
+mem_heap_B=77957
+mem_heap_extra_B=435
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=73374212
+mem_heap_B=78013
+mem_heap_extra_B=451
+mem_stacks_B=2904
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=78379405
+mem_heap_B=78009
+mem_heap_extra_B=431
+mem_stacks_B=2936
+heap_tree=detailed
+n3: 78009 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3241 in 38 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=17
+#-----------
+time=82033993
+mem_heap_B=77785
+mem_heap_extra_B=399
+mem_stacks_B=2792
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=86602279
+mem_heap_B=78013
+mem_heap_extra_B=451
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=93911485
+mem_heap_B=77785
+mem_heap_extra_B=399
+mem_stacks_B=2792
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=98479771
+mem_heap_B=78013
+mem_heap_extra_B=451
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=105788977
+mem_heap_B=77785
+mem_heap_extra_B=399
+mem_stacks_B=2792
+heap_tree=detailed
+n3: 77785 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3017 in 38 places, all below massif's threshold (1.00%)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+#-----------
+snapshot=22
+#-----------
+time=110357263
+mem_heap_B=78013
+mem_heap_extra_B=451
+mem_stacks_B=2872
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=117666469
+mem_heap_B=77785
+mem_heap_extra_B=399
+mem_stacks_B=2792
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=123081643
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=11552
+heap_tree=detailed
+n6: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 4217 in 50 places, all below massif's threshold (1.00%)
+ n1: 4096 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 4096 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 4096 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 4096 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 4096 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 4096 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 4096 0x4C85352: clone (clone.S:95)
+ n1: 3072 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 3072 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 3072 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 3072 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 3072 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 3072 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 3072 0x4C85352: clone (clone.S:95)
+ n1: 1040 0x4BACC41: __new_exitfn (cxa_atexit.c:114)
+  n1: 1040 0x4BACE26: __internal_atexit (cxa_atexit.c:44)
+   n1: 1040 0x4BACE26: __cxa_atexit (cxa_atexit.c:70)
+    n1: 1040 0x4011B99: call_init.part.0 (dl-init.c:72)
+     n1: 1040 0x4011CA0: call_init (dl-init.c:30)
+      n1: 1040 0x4011CA0: _dl_init (dl-init.c:119)
+       n0: 1040 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 1024 0x4BE7D03: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 1024 0x4BF7ECF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4BF6F2F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x4BF56B4: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x4BF56B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x4BE93C0: fwrite (iofwrite.c:39)
+       n1: 1024 0x49F9A34: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+        n1: 1024 0x4883F42: benchmark::ConsoleReporter::PrintHeader(benchmark::BenchmarkReporter::Run const&) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+         n1: 1024 0x48826E0: benchmark::ConsoleReporter::ReportRuns(std::vector<benchmark::BenchmarkReporter::Run, std::allocator<benchmark::BenchmarkReporter::Run> > const&) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+          n1: 1024 0x48A1BB9: benchmark::RunSpecifiedBenchmarks(benchmark::BenchmarkReporter*, benchmark::BenchmarkReporter*) (in /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0)
+           n0: 1024 0x10C5C5: main (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=125966178
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=57488
+heap_tree=detailed
+n4: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 6281 in 52 places, all below massif's threshold (1.00%)
+ n1: 4096 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 4096 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 4096 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 4096 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 4096 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 4096 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 4096 0x4C85352: clone (clone.S:95)
+ n1: 3072 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 3072 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 3072 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 3072 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 3072 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 3072 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 3072 0x4C85352: clone (clone.S:95)
+#-----------
+snapshot=26
+#-----------
+time=132400491
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=159920
+heap_tree=detailed
+n4: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 6281 in 52 places, all below massif's threshold (1.00%)
+ n1: 4096 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 4096 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 4096 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 4096 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 4096 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 4096 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 4096 0x4C85352: clone (clone.S:95)
+ n1: 3072 0x110B76: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 3072 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 3072 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 3072 0x111674: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<filter_func(std::future<std::vector<int, std::allocator<int> > >)::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 3072 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 3072 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 3072 0x4C85352: clone (clone.S:95)
+#-----------
+snapshot=27
+#-----------
+time=139263779
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=269216
+heap_tree=detailed
+n3: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 9353 in 53 places, all below massif's threshold (1.00%)
+ n1: 4096 0x111317: std::_Function_handler<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> (), std::__future_base::_Task_setter<std::unique_ptr<std::__future_base::_Result<std::vector<int, std::allocator<int> > >, std::__future_base::_Result_base::_Deleter>, std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > > >::_M_invoke(std::_Any_data const&) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+  n1: 4096 0x111B5C: std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*) (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+   n1: 4096 0x4B544DE: __pthread_once_slow (pthread_once.c:116)
+    n1: 4096 0x1114A4: std::__future_base::_Async_state_impl<std::thread::_Invoker<std::tuple<generator()::{lambda()#1}> >, std::vector<int, std::allocator<int> > >::_M_run() (in /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/bench_coro_vs_future)
+     n1: 4096 0x4996792: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+      n1: 4096 0x4B4B608: start_thread (pthread_create.c:477)
+       n0: 4096 0x4C85352: clone (clone.S:95)
+#-----------
+snapshot=28
+#-----------
+time=145496989
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=368480
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=152492907
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=479888
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=157632145
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=561728
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=164961786
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=678416
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=169073216
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=743888
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=175339765
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=843680
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=180280081
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=922352
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=35
+#-----------
+time=185684376
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1008416
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=36
+#-----------
+time=190757358
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1089200
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=196990778
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1188464
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=204649816
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1310432
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=211115363
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1413392
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=219072918
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1540112
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=223283782
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1607168
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=227693633
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1677392
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=234623161
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1787744
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=239463967
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1864832
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=244503735
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=1945088
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=249742436
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2028512
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=255213224
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2115632
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=260916083
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2206448
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=268376045
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2325248
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=269901162
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2349536
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=271459473
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2374352
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=52
+#-----------
+time=273017853
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2399168
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=53
+#-----------
+time=274609360
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2424512
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=276200896
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2449856
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=55
+#-----------
+time=277825550
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2475728
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=279450139
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2501600
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=57
+#-----------
+time=281107951
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2528000
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=282765763
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2554400
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=284456769
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2581328
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=286147739
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2608256
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=287871903
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2635712
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=62
+#-----------
+time=289596067
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2663168
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=63
+#-----------
+time=291353329
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2691152
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=293110651
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2719136
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=294901091
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2747648
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=296691569
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2776160
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=67
+#-----------
+time=298515203
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2805200
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=68
+#-----------
+time=300338810
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2834240
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=69
+#-----------
+time=302195564
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2863808
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=304052318
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2893376
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=305942190
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2923472
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=72
+#-----------
+time=307898425
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2954624
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=73
+#-----------
+time=309821531
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=2985248
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=311777764
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3016400
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=313733999
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3047552
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=315723390
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3079232
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=77
+#-----------
+time=317712781
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3110912
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=78
+#-----------
+time=319735290
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3143120
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=79
+#-----------
+time=321790995
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3175856
+heap_tree=detailed
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=323846691
+mem_heap_B=87177
+mem_heap_extra_B=519
+mem_stacks_B=3208592
+heap_tree=peak
+n2: 87177 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4963501: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.32)
+  n1: 73728 0x4011B99: call_init.part.0 (dl-init.c:72)
+   n1: 73728 0x4011CA0: call_init (dl-init.c:30)
+    n1: 73728 0x4011CA0: _dl_init (dl-init.c:119)
+     n0: 73728 0x4001139: ??? (in /usr/lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 13449 in 54 places, all below massif's threshold (1.00%)
