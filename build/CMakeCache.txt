@@ -198,6 +198,9 @@ CoroBenchMark_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CoroBenchMark_SOURCE_DIR:STATIC=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking
 
+//No help, variable specified on the command line.
+USE_TSAN:UNINITIALIZED=ON
+
 //The directory containing a CMake configuration file for benchmark.
 benchmark_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/benchmark
 

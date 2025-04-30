@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/include
 
-CXX_FLAGS =  -fcoroutines -O3 -DNDEBUG -std=gnu++20
+CXX_FLAGS =  -fcoroutines -O3 -DNDEBUG -std=gnu++20 -fsanitize=thread
 

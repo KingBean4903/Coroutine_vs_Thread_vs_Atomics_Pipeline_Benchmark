@@ -1,1 +1,1 @@
-/usr/bin/c++  -fcoroutines -O3 -DNDEBUG CMakeFiles/bench_coro_vs_future.dir/benchmarks/basic_benchmark.cpp.o -o bench_coro_vs_future  libcoro_pipeline.a libfuture_pipeline.a /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0 -pthread /usr/lib/x86_64-linux-gnu/librt.so
+/usr/bin/c++  -fcoroutines -O3 -DNDEBUG CMakeFiles/bench_coro_vs_future.dir/benchmarks/basic_benchmark.cpp.o -o bench_coro_vs_future  libcoro_pipeline.a libfuture_pipeline.a /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0 -fsanitize=thread -pthread /usr/lib/x86_64-linux-gnu/librt.so
