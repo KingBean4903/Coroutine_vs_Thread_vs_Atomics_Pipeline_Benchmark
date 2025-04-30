@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcoro_pipeline.a CMakeFiles/coro_pipeline.dir/src/coro_pipeline.cpp.o
+/usr/bin/ranlib libcoro_pipeline.a
