@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfuture_pipeline.a CMakeFiles/future_pipeline.dir/src/future_pipeline.cpp.o
+/usr/bin/ranlib libfuture_pipeline.a

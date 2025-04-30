@@ -1,1 +1,0 @@
-/usr/bin/c++  -fcoroutines -O3 -DNDEBUG CMakeFiles/bench_coro.dir/benchmarks/basic_benchmark.cpp.o -o bench_coro  libcoro_pipeline.a /usr/lib/x86_64-linux-gnu/libbenchmark.so.1.5.0 -pthread /usr/lib/x86_64-linux-gnu/librt.so

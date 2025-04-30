@@ -1,4 +1,5 @@
 /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/coro_pipeline.dir
-/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/bench_coro.dir
+/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/future_pipeline.dir
+/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/bench_coro_vs_future.dir
 /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/edit_cache.dir
 /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles/rebuild_cache.dir

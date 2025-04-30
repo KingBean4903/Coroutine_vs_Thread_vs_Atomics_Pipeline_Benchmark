@@ -9,7 +9,13 @@ int main() {
 	auto end = std::chrono::high_resolution_clock::now();
 	std::cout << "Coroutine time " << (end - start).count()
 		<< " ns\n";
+	
 
+	start = std::chrono::high_resolution_clock::now();
+	run_future_pipeline();
+	end = std::chrono::high_resolution_clock::now();
+	std::cout << "Future time " << (end - start).count()
+		<< " ns\n";
 
 
 }

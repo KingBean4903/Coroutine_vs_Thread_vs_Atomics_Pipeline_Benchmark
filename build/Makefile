@@ -130,24 +130,37 @@ coro_pipeline/fast:
 .PHONY : coro_pipeline/fast
 
 #=============================================================================
-# Target rules for targets named bench_coro
+# Target rules for targets named future_pipeline
 
 # Build rule for target.
-bench_coro: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_coro
-.PHONY : bench_coro
+future_pipeline: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 future_pipeline
+.PHONY : future_pipeline
 
 # fast build rule for target.
-bench_coro/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/build
-.PHONY : bench_coro/fast
+future_pipeline/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/build
+.PHONY : future_pipeline/fast
+
+#=============================================================================
+# Target rules for targets named bench_coro_vs_future
+
+# Build rule for target.
+bench_coro_vs_future: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bench_coro_vs_future
+.PHONY : bench_coro_vs_future
+
+# fast build rule for target.
+bench_coro_vs_future/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/build
+.PHONY : bench_coro_vs_future/fast
 
 benchmarks/basic_benchmark.o: benchmarks/basic_benchmark.cpp.o
 .PHONY : benchmarks/basic_benchmark.o
 
 # target to build an object file
 benchmarks/basic_benchmark.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/benchmarks/basic_benchmark.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/benchmarks/basic_benchmark.cpp.o
 .PHONY : benchmarks/basic_benchmark.cpp.o
 
 benchmarks/basic_benchmark.i: benchmarks/basic_benchmark.cpp.i
@@ -155,7 +168,7 @@ benchmarks/basic_benchmark.i: benchmarks/basic_benchmark.cpp.i
 
 # target to preprocess a source file
 benchmarks/basic_benchmark.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/benchmarks/basic_benchmark.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/benchmarks/basic_benchmark.cpp.i
 .PHONY : benchmarks/basic_benchmark.cpp.i
 
 benchmarks/basic_benchmark.s: benchmarks/basic_benchmark.cpp.s
@@ -163,7 +176,7 @@ benchmarks/basic_benchmark.s: benchmarks/basic_benchmark.cpp.s
 
 # target to generate assembly for a file
 benchmarks/basic_benchmark.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/benchmarks/basic_benchmark.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/benchmarks/basic_benchmark.cpp.s
 .PHONY : benchmarks/basic_benchmark.cpp.s
 
 src/coro_pipeline.o: src/coro_pipeline.cpp.o
@@ -190,6 +203,30 @@ src/coro_pipeline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coro_pipeline.dir/build.make CMakeFiles/coro_pipeline.dir/src/coro_pipeline.cpp.s
 .PHONY : src/coro_pipeline.cpp.s
 
+src/future_pipeline.o: src/future_pipeline.cpp.o
+.PHONY : src/future_pipeline.o
+
+# target to build an object file
+src/future_pipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/src/future_pipeline.cpp.o
+.PHONY : src/future_pipeline.cpp.o
+
+src/future_pipeline.i: src/future_pipeline.cpp.i
+.PHONY : src/future_pipeline.i
+
+# target to preprocess a source file
+src/future_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/src/future_pipeline.cpp.i
+.PHONY : src/future_pipeline.cpp.i
+
+src/future_pipeline.s: src/future_pipeline.cpp.s
+.PHONY : src/future_pipeline.s
+
+# target to generate assembly for a file
+src/future_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/src/future_pipeline.cpp.s
+.PHONY : src/future_pipeline.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +235,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... bench_coro"
+	@echo "... bench_coro_vs_future"
 	@echo "... coro_pipeline"
+	@echo "... future_pipeline"
 	@echo "... benchmarks/basic_benchmark.o"
 	@echo "... benchmarks/basic_benchmark.i"
 	@echo "... benchmarks/basic_benchmark.s"
 	@echo "... src/coro_pipeline.o"
 	@echo "... src/coro_pipeline.i"
 	@echo "... src/coro_pipeline.s"
+	@echo "... src/future_pipeline.o"
+	@echo "... src/future_pipeline.i"
+	@echo "... src/future_pipeline.s"
 .PHONY : help
 
 

@@ -64,12 +64,14 @@ CMAKE_BINARY_DIR = /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/bui
 
 # The main recursive "all" target.
 all: CMakeFiles/coro_pipeline.dir/all
-all: CMakeFiles/bench_coro.dir/all
+all: CMakeFiles/future_pipeline.dir/all
+all: CMakeFiles/bench_coro_vs_future.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/coro_pipeline.dir/codegen
-codegen: CMakeFiles/bench_coro.dir/codegen
+codegen: CMakeFiles/future_pipeline.dir/codegen
+codegen: CMakeFiles/bench_coro_vs_future.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -78,7 +80,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/coro_pipeline.dir/clean
-clean: CMakeFiles/bench_coro.dir/clean
+clean: CMakeFiles/future_pipeline.dir/clean
+clean: CMakeFiles/bench_coro_vs_future.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -114,36 +117,69 @@ CMakeFiles/coro_pipeline.dir/clean:
 .PHONY : CMakeFiles/coro_pipeline.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/bench_coro.dir
+# Target rules for target CMakeFiles/future_pipeline.dir
 
 # All Build rule for target.
-CMakeFiles/bench_coro.dir/all: CMakeFiles/coro_pipeline.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=1,2 "Built target bench_coro"
-.PHONY : CMakeFiles/bench_coro.dir/all
+CMakeFiles/future_pipeline.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=5,6 "Built target future_pipeline"
+.PHONY : CMakeFiles/future_pipeline.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/bench_coro.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bench_coro.dir/all
+CMakeFiles/future_pipeline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/future_pipeline.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles 0
-.PHONY : CMakeFiles/bench_coro.dir/rule
+.PHONY : CMakeFiles/future_pipeline.dir/rule
 
 # Convenience name for target.
-bench_coro: CMakeFiles/bench_coro.dir/rule
-.PHONY : bench_coro
+future_pipeline: CMakeFiles/future_pipeline.dir/rule
+.PHONY : future_pipeline
 
 # codegen rule for target.
-CMakeFiles/bench_coro.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=1,2 "Finished codegen for target bench_coro"
-.PHONY : CMakeFiles/bench_coro.dir/codegen
+CMakeFiles/future_pipeline.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=5,6 "Finished codegen for target future_pipeline"
+.PHONY : CMakeFiles/future_pipeline.dir/codegen
 
 # clean rule for target.
-CMakeFiles/bench_coro.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro.dir/build.make CMakeFiles/bench_coro.dir/clean
-.PHONY : CMakeFiles/bench_coro.dir/clean
+CMakeFiles/future_pipeline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/future_pipeline.dir/build.make CMakeFiles/future_pipeline.dir/clean
+.PHONY : CMakeFiles/future_pipeline.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bench_coro_vs_future.dir
+
+# All Build rule for target.
+CMakeFiles/bench_coro_vs_future.dir/all: CMakeFiles/coro_pipeline.dir/all
+CMakeFiles/bench_coro_vs_future.dir/all: CMakeFiles/future_pipeline.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=1,2 "Built target bench_coro_vs_future"
+.PHONY : CMakeFiles/bench_coro_vs_future.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bench_coro_vs_future.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bench_coro_vs_future.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles 0
+.PHONY : CMakeFiles/bench_coro_vs_future.dir/rule
+
+# Convenience name for target.
+bench_coro_vs_future: CMakeFiles/bench_coro_vs_future.dir/rule
+.PHONY : bench_coro_vs_future
+
+# codegen rule for target.
+CMakeFiles/bench_coro_vs_future.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/baimungi/Documents/C_STUDIES/Pipelines_Benchmarking/build/CMakeFiles --progress-num=1,2 "Finished codegen for target bench_coro_vs_future"
+.PHONY : CMakeFiles/bench_coro_vs_future.dir/codegen
+
+# clean rule for target.
+CMakeFiles/bench_coro_vs_future.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bench_coro_vs_future.dir/build.make CMakeFiles/bench_coro_vs_future.dir/clean
+.PHONY : CMakeFiles/bench_coro_vs_future.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
